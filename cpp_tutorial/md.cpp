@@ -25,6 +25,14 @@ int main() {
   }
   cout << "\n\n";
 
+  /*
+  xc = xcosθ - ysinθ
+  yc = xsinθ + ycosθ
+  */
+
+
+
+
 
 
 
