@@ -2,15 +2,28 @@
 using namespace std;
 
 int main() {
-  int mat[3][5] = {1,1,1,1,1,2,2,2,2,2,3,3,3,3,3};
-  for (int i = 0; i < 3; i++) {
+  int mat[3][5] = {1,1,1,1,1,2,2,2,2,2,3,3,3,3,3}; // m x n = 3 x 5;
+  for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 3; j++) {
-      cout << mat[i][j] << " ";
+      cout << mat[j][i] << " ";
+    }
+    cout << endl;
+  }
+  cout << "\n\n";
+
+  int mat[3][5] = {1,1,1,1,1,2,2,2,2,2,3,3,3,3,3}; // m x n = 3 x 5;
+  for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 3; j++) {
+      cout << mat[j][i] << " ";
     }
     cout << endl;
   }
 
-  
+  cout << "\n\n";
+  for(int i = 0; i < 7; ++i) {
+    cout << i << " ";
+  }
+  cout << "\n\n";
 
 
 
