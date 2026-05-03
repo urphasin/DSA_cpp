@@ -5,7 +5,7 @@ int main() {
   int mat[3][5] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}; // m x n = 3 x 5;
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 3; j++) {
-      cout << mat[j][i] << " ";
+      cout << mat[j][i] << " \t";
     }
     cout << endl;
   }
@@ -14,7 +14,7 @@ int main() {
   // int mat[3][5] = {1,1,1,1,1,2,2,2,2,2,3,3,3,3,3}; // m x n = 3 x 5;
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 5; j++) {
-      cout << mat[i][j] << " ";
+      cout << mat[i][j] << " \t";
     }
     cout << endl;
   }
