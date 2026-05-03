@@ -2,6 +2,19 @@
 using namespace std;
 
 int main() {
+  int mat[3][5] = {1,1,1,1,1,2,2,2,2,2,3,3,3,3,3};
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      cout << mat[i][j] << " ";
+    }
+    cout << endl;
+  }
+
+  
+
+
+
+
   int m = 4, n = 10;
   vector<vector<int>> grid(n, vector<int>(m));
 
@@ -19,4 +32,8 @@ int main() {
   //   int ni = i + dx[k];
   //   int nj = j + dy[k];
   // }
+
+
+
+  return 0;
 }
