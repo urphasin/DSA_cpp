@@ -27,56 +27,61 @@ using namespace std;
 /*
 POST SUBMISSION QUESTIONS:
 
-1.  
+1.
 
 */
 
-
-
 // PROTOTYPES
-std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
-
+std::ostream &operator<<(std::ostream &os, unsigned __int128 x);
 
 // CLASSES AND STRUCTURES
-enum class ShapeKind{ Circle, Rectangle, Square };
-struct Distance {
-  int feet;
-  double inches;
+enum class ShapeKind
+{
+    Circle,
+    Rectangle,
+    Square
 };
-struct Room {
-  ShapeKind shape;
-  Distance length;
-  Distance width;
+struct Distance
+{
+    int feet;
+    double inches;
 };
-
-
+struct Room
+{
+    ShapeKind shape;
+    Distance length;
+    Distance width;
+};
 
 // MAIN
-int main() {
-  
+int main()
+{
+
+    
     /*
-    unsigned __int128 is a compiler extension (mainly GCC/Clang), 
-    not a standard C++ integer type, 
+    unsigned __int128 is a compiler extension (mainly GCC/Clang),
+    not a standard C++ integer type,
     so the standard stream operators (<<) were never overloaded for it.
     */
     unsigned __int128 x = 4;
     std::cout << x << std::endl;
 
-
     return 0;
 }
 
-
 // DEFINITIONS
-std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
-    if (x == 0) {
+std::ostream &operator<<(std::ostream &os, unsigned __int128 x)
+{
+    if (x == 0)
+    {
         os << '0';
         return os;
     }
 
     std::string s;
 
-    while (x > 0) {
+    while (x > 0)
+    {
         s += '0' + (x % 10);
         x /= 10;
     }
@@ -86,35 +91,3 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     os << s;
     return os;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
