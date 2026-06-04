@@ -38,7 +38,15 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
 
 // CLASSES AND STRUCTURES
+struct DynamicArray {
+  int* data;
+  int size;
+  int capacity;
+};
 
+void push_back(DynamicArray* arr, int value) {
+  
+}
 
 
 
