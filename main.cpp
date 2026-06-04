@@ -38,20 +38,22 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
 
 // CLASSES AND STRUCTURES
-struct DynamicArray {
-  int* data;
-  int size;
-  int capacity;
+enum class ShapeKind{ Circle, Rectangle, Square };
+struct Distance {
+  int feet;
+  double inches;
 };
-
-void push_back(DynamicArray* arr, int value) {
-  
-}
+struct Room {
+  ShapeKind shape;
+  Distance length;
+  Distance width;
+};
 
 
 
 // MAIN
 int main() {
+  
     /*
     unsigned __int128 is a compiler extension (mainly GCC/Clang), 
     not a standard C++ integer type, 
