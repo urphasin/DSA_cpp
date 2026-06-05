@@ -22,6 +22,7 @@
 #include <numeric>
 #include <functional>
 #include <utility>
+#include "main.h"
 using namespace std;
 
 /*
@@ -66,6 +67,8 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
+    message1();
+
     return 0;
 }
 
@@ -92,4 +95,18 @@ std::ostream &operator<<(std::ostream &os, unsigned __int128 x)
     return os;
 }
 
-
+void message1() {
+    message2();
+    cout << "Mesage 1" << endl;
+}
+void message2() {
+    message3();
+    cout << "Mesage 2" << endl;
+}
+void message3() {
+    message4();
+    cout << "Mesage 3" << endl;
+}
+void message4() {
+    cout << "Mesage 4" << endl;
+}
