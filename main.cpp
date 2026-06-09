@@ -74,8 +74,6 @@ struct Point2D {
         ans << "(" << xr << ", " << yr << ")";
         return ans.str();
     }
-
-    
 };
 
 // MAIN
@@ -91,14 +89,16 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
-    Point2D p;
+    Point2D p, q;
     // Point p = (10, 30)
+    // Point q = (45, 70)
     std::cout << "Enter point p: ";
     char trash;
     cin >> trash >> p.x >> trash >> p.y >> trash;
-    Point2D::print(p);
-    std::cout << trash << "\n";
-
+    std::cout << "Enter point q: ";
+    cin >> trash >> q.x >> trash >> q.y >> trash;
+    std::cout << "Euclidean Distance: " << Point2D::EuclideanDistance(p, q);
+    std::cout << "MidPoint : " << Point2D::EuclideanDistance(p, q);
 
     int arr[] = {1, 2, 3, 4};
     for (int i{0}; i < 4; i++) {
