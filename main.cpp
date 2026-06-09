@@ -59,6 +59,19 @@ struct Point2D {
     static void print(const Point2D& p) {
         std::cout << "[" << p.x << ", " << p.y << "]"<< std::endl;
     }
+    static double EuclideanDistance(const Point2D& p, const Point2D& q) {
+        double xr = q.x - p.x;
+        double yr = q.y - p.y;
+
+        double ans = sqrt(pow(xr, 2) + pow(yr, 2));
+        return ans;
+    }
+    static std::string MidPoint(const Point2D& p, const Point2D& q) {
+        double xr = (p.x + q.x) / 2.0;
+        double yr = (p.y + q.y) / 2.0;
+
+        return "(" + std::to_string(xr) + ", " + static_cast<std::string>(yr) + ")";
+    }
 };
 
 // MAIN
