@@ -71,6 +71,8 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
+    Point2D p;
+
     int arr[] = {1, 2, 3, 4};
     for (int i{0}; i < 4; i++) {
         std::cout << "{";
