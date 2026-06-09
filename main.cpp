@@ -54,6 +54,14 @@ struct Room
     Distance length;
     Distance width;
 };
+struct Date {
+    std::string month;
+    int day;
+    int year;
+    static void print(const Date& d) {
+        std::cout << "Date: " << d.month << "/" << d.day << "/" << d.year << "\n";
+    }
+};
 struct Point2D {
     int x;
     int y;
@@ -76,6 +84,8 @@ struct Point2D {
     }
 };
 
+
+
 // MAIN
 int main()
 {
@@ -89,16 +99,21 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
+    Date today;
+    std::cout << "Enter a date: ";
+    char trash;
+    cin >> today.month >> today.day >> today.year;
+    Date::print(today);
+
     Point2D p, q;
     // Point p = (10, 30)
     // Point q = (45, 70)
     std::cout << "Enter point p: ";
-    char trash;
     cin >> trash >> p.x >> trash >> p.y >> trash;
     std::cout << "Enter point q: ";
     cin >> trash >> q.x >> trash >> q.y >> trash;
-    std::cout << "Euclidean Distance: " << Point2D::EuclideanDistance(p, q);
-    std::cout << "MidPoint : " << Point2D::EuclideanDistance(p, q);
+    std::cout << "Euclidean Distance: " << Point2D::EuclideanDistance(p, q) << "\n";
+    std::cout << "MidPoint : " << Point2D::MidPoint(p, q) << "\n";
 
     int arr[] = {1, 2, 3, 4};
     for (int i{0}; i < 4; i++) {
