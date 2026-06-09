@@ -53,6 +53,10 @@ struct Room
     Distance length;
     Distance width;
 };
+struct Point2D {
+    int x;
+    int y;
+};
 
 // MAIN
 int main()
