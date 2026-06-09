@@ -70,9 +70,12 @@ struct Point2D {
     static std::string MidPoint(const Point2D& p, const Point2D& q) {
         double xr = (p.x + q.x) / 2.0;
         double yr = (p.y + q.y) / 2.0;
-
-        return "(" + std::to_string(xr) + ", " + static_cast<std::string>(yr) + ")";
+        std::ostringstream ans;
+        ans << "(" << xr << ", " << yr << ")";
+        return ans.str();
     }
+
+    
 };
 
 // MAIN
