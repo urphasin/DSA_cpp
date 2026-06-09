@@ -56,6 +56,9 @@ struct Room
 struct Point2D {
     int x;
     int y;
+    static void print(const Point2D& p) {
+        std::cout << "[" << p.x << ", " << p.y << "]"<< std::endl;
+    }
 };
 
 // MAIN
@@ -72,6 +75,13 @@ int main()
     std::cout << x << " Hello world." << std::endl;
 
     Point2D p;
+    // Point p = (10, 30)
+    std::cout << "Enter point p: ";
+    char trash;
+    cin >> trash >> p.x >> trash >> p.y >> trash;
+    Point2D::print(p);
+    std::cout << trash << "\n";
+
 
     int arr[] = {1, 2, 3, 4};
     for (int i{0}; i < 4; i++) {
