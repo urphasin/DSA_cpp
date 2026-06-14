@@ -99,6 +99,16 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
+
+    std::cout << "Enter som: ";
+    int anum;
+    cin >> anum;
+    int p = 56;
+    int* num = &p;
+    *num = 20;
+    std::cout << "\n" << *num << std::endl;
+    
+    
     int arr[] = {1, 2, 3, 4};
     for (int i{0}; i < 4; i++) {
         std::cout << "{";
